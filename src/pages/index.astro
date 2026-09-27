@@ -1,48 +1,268 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import TrustBadges from '../components/TrustBadges.astro';
-import MasterCablerSection from '../components/MasterCablerSection.astro';
-import FeaturedAwards from '../components/FeaturedAwards.astro';
-import ServicesGrid from '../components/ServicesGrid.astro';
-import ActiveDeterrenceShowcase from '../components/ActiveDeterrenceShowcase.astro';
-import MobileAppViewer from '../components/MobileAppViewer.astro';
-import Inclusions from '../components/Inclusions.astro';
-import SystemComparison from '../components/SystemComparison.astro';
-import PricingPackages from '../components/PricingPackages.astro';
-import ProcessSteps from '../components/ProcessSteps.astro';
-import LocalCaseStudy from '../components/LocalCaseStudy.astro';
-import InstallerProfile from '../components/InstallerProfile.astro';
-import Reviews from '../components/Reviews.astro';
-import SuburbGrid from '../components/SuburbGrid.astro';
-import CarindaleServiceArea from '../components/CarindaleServiceArea.astro';
-import Faq from '../components/Faq.astro';
-import QuoteForm from '../components/QuoteForm.astro';
-import WomBadges from '../components/WomBadges.astro';
-import Footer from '../components/Footer.astro';
----
+import Site from '../layouts/Site.astro';
+import { business } from '../config/business.ts';
+import { home } from '../data/home.ts';
 
-<Layout>
-  <Header />
-  <Hero />
-  <TrustBadges />
-  <MasterCablerSection />
-  <FeaturedAwards />
-  <ServicesGrid />
-  <ActiveDeterrenceShowcase />
-  <MobileAppViewer />
-  <Inclusions />
-  <SystemComparison />
-  <PricingPackages />
-  <ProcessSteps />
-  <LocalCaseStudy />
-  <InstallerProfile />
-  <Reviews />
-  <SuburbGrid />
-  <Faq />
-  <QuoteForm />
-  <WomBadges />
-  <CarindaleServiceArea />
-  <Footer />
-</Layout>
+// Minimal inline icon set (stroke-based, inherits currentColor)
+const icons: Record<string, string> = {
+  desktop: '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+  laptop: '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/>',
+  apple: '<path d="M12 20.5c-2 0-3-1.5-4.5-4C6 14 5.5 11 7 9c1-1.3 2.5-1.4 3.5-1 .8.3 1.2.3 2 0 1-.4 2.5-.3 3.5 1"/><path d="M12 6c0-1.5 1-3 2.5-3.5"/>',
+  shield: '<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
+  database: '<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
+  copy: '<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>',
+  wifi: '<path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/><path d="M2 9a15 15 0 0 1 20 0"/>',
+  gauge: '<path d="M12 13l4-3"/><path d="M4 19a9 9 0 1 1 16 0z"/>',
+  cpu: '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>',
+};
+const a = business.address;
+---
+<Site
+  title="Computer Repairs Stretton, Fast, Affordable PC & Mac Repairs"
+  description="Award-winning, family-owned computer repairs in Stretton. No call-out fees, most repairs done in an hour. PC, laptop and Mac repairs across Greater Brisbane. Call 0477 319 160."
+  canonical={`${business.domain}/`}
+  ogImage="/assets/wp-content/uploads/2021/12/logo-h-color-stretton.png"
+>
+  
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="pill hero-pill">{home.heroKicker}</span>
+        <h1>{home.heroTitle}</h1>
+        <p class="hero-lead">{home.heroLead}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href={business.quoteUrl}>Get a free quote</a>
+          <a class="btn btn-ghost btn-lg" href={`tel:${business.phoneTel}`}>Call {business.phoneDisplay}</a>
+        </div>
+        <div class="hero-stats">
+          {home.stats.map((s) => (
+            <div class="stat"><strong>{s.value}</strong><span>{s.label}</span></div>
+          ))}
+        </div>
+      </div>
+      <aside class="hero-card">
+        <img src="/assets/wp-content/uploads/2023/11/5tars.png" alt="5 out of 5 stars" width="195" height="35" class="stars" />
+        <p class="hero-card-rating"><strong>5.0</strong> from <strong>800+</strong> reviews</p>
+        <img src="/assets/wp-content/uploads/2023/11/wordofmouth-HCP-badge.png" alt="Word of Mouth Highly Commended Professional" width="431" height="431" class="hcp" />
+        <p class="hero-card-note">Word of Mouth service awards, every year since 2014.</p>
+      </aside>
+    </div>
+  </section>
+
+  
+  <section class="awards">
+    <div class="container awards-inner">
+      <p class="awards-label">Recognised for service, 10 years running</p>
+      <img src="/assets/wp-content/uploads/2024/06/badges-new-1024x136.png" alt="Word of Mouth service awards 2014 to 2024" width="1024" height="136" />
+      <p class="awards-note">As featured on <strong>9 News</strong>.</p>
+    </div>
+  </section>
+
+  
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What we fix</span>
+        <h2>Repairs and setup for anything with a screen</h2>
+        <p>From a slow laptop to full data recovery, we handle it all, with no call-out fee and most standard jobs done within the hour.</p>
+      </div>
+      <div class="grid services-grid">
+        {home.services.map((s) => (
+          <a class="card service-card" href={s.href}>
+            <span class="svc-icon" set:html={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${icons[s.icon] || ''}</svg>`}></span>
+            <h3>{s.label}</h3>
+            <p>{s.blurb}</p>
+            <span class="svc-more">Learn more →</span>
+          </a>
+        ))}
+      </div>
+      <div class="services-all">
+        <a class="btn btn-outline" href="/our-services/">See all services</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section why" >
+    <div class="container why-grid">
+      <div class="why-copy">
+        <span class="eyebrow">Why Stretton chooses us</span>
+        <h2>Honest, fast and genuinely affordable</h2>
+        <p class="lead">We are a family-owned business, not a franchise. You get a Microsoft Certified technician who explains what is wrong in plain English and fixes it at the cheapest rate you will find locally.</p>
+        <a class="btn btn-primary" href={business.quoteUrl}>Get a free quote</a>
+      </div>
+      <ul class="why-list">
+        {home.why.map((w) => (
+          <li>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>{w}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  
+  <section class="section-tight brands">
+    <div class="container">
+      <p class="brands-label">We repair every major brand</p>
+      <div class="brand-row">
+        {home.brands.map((b) => <a class="brand-chip" href={b.href}>{b.label}</a>)}
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section reviews">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Real reviews</span>
+        <h2>Trusted by hundreds of locals</h2>
+        <p>A few of the 800+ five-star reviews from customers across Greater Brisbane.</p>
+      </div>
+      <div class="grid reviews-grid">
+        {home.reviews.map((r) => (
+          <figure class="card review-card">
+            <img src="/assets/wp-content/uploads/2023/11/5tars.png" alt="5 stars" width="195" height="35" class="review-stars" />
+            <blockquote>{r.text}</blockquote>
+            <figcaption>, {r.name}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section streets">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Areas we service</span>
+        <h2>{home.streetsHeading}</h2>
+        <p>{home.streetsIntro}</p>
+      </div>
+      <ul class="street-list">
+        {home.streets.map((s) => (
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>{s}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to get your computer fixed?</h2>
+        <p>No call-out fees. No travel costs. Onsite across Stretton and Greater Brisbane, 7 days a week.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary btn-lg" href={business.quoteUrl}>Get a free quote</a>
+        <a class="btn btn-ghost btn-lg" href={`tel:${business.phoneTel}`}>Call {business.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Site>
+
+<style>
+  /* HERO */
+  .hero {
+    background:
+      radial-gradient(80% 120% at 85% -10%, color-mix(in srgb, var(--hero-glow) 42%, transparent), transparent 60%),
+      linear-gradient(160deg, var(--hero-from), var(--hero-to));
+    color: #eaf0ff; overflow: hidden; position: relative;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.5fr 0.9fr; gap: 3rem; align-items: center; padding-block: var(--sp-8) var(--sp-7); }
+  .hero-pill { background: color-mix(in srgb, #fff 14%, transparent); color: #fff; backdrop-filter: blur(4px); }
+  .hero h1 { color: #fff; font-size: var(--step-5); margin: 1.1rem 0 1rem; max-width: 16ch; }
+  .hero-lead { color: #c3cde6; font-size: var(--step-1); max-width: 52ch; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.8rem; }
+  .hero-stats { display: grid; grid-template-columns: repeat(4, auto); gap: 2.2rem; margin-top: 2.6rem; }
+  .stat { display: flex; flex-direction: column; }
+  .stat strong { font-family: var(--font-head); font-size: var(--step-2); color: #fff; line-height: 1; }
+  .stat span { font-size: var(--step--1); color: #9fabca; margin-top: 0.35rem; max-width: 14ch; }
+
+  .hero-card {
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--radius-lg); padding: 1.8rem; text-align: center;
+    backdrop-filter: blur(8px); box-shadow: var(--shadow-lg);
+  }
+  .hero-card .stars { margin: 0 auto; }
+  .hero-card-rating { margin: 0.8rem 0 1.2rem; color: #dbe3f6; }
+  .hero-card-rating strong { color: #fff; }
+  .hero-card .hcp { width: 150px; height: 150px; margin: 0 auto; border-radius: 50%; }
+  .hero-card-note { font-size: var(--step--1); color: #aeb9d6; margin-top: 1rem; }
+
+  /* AWARDS */
+  .awards { background: var(--surface); border-bottom: 1px solid var(--border); }
+  .awards-inner { text-align: center; padding-block: var(--sp-5); }
+  .awards-label { font-family: var(--font-head); font-weight: 600; color: var(--fg-soft); font-size: var(--step--1); letter-spacing: .04em; }
+  .awards-inner img { max-width: 900px; width: 100%; margin: 1.1rem auto 0.9rem; }
+  .awards-note { color: var(--fg-soft); font-size: var(--step--1); }
+  .awards-note strong { color: var(--ink); }
+
+  /* SERVICES */
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .service-card { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; color: inherit; }
+  .service-card:hover { text-decoration: none; transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--brand) 40%, var(--border)); }
+  .svc-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--brand-tint); color: var(--brand-strong); margin-bottom: 1rem; }
+  .svc-icon svg { width: 26px; height: 26px; }
+  .service-card h3 { font-size: var(--step-1); }
+  .service-card p { color: var(--fg-soft); font-size: var(--step--1); margin: 0.5rem 0 1rem; }
+  .svc-more { margin-top: auto; font-family: var(--font-head); font-weight: 600; color: var(--brand-strong); font-size: var(--step--1); }
+  .services-all { text-align: center; margin-top: var(--sp-5); }
+
+  /* WHY */
+  .why { background: var(--surface-2); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  .why-copy .lead { margin: 1rem 0 1.6rem; }
+  .why-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.4rem; }
+  .why-list li { display: flex; gap: 0.7rem; align-items: flex-start; font-weight: 500; }
+  .why-list svg { flex: none; margin-top: 3px; color: var(--brand); background: var(--brand-tint); border-radius: 50%; padding: 3px; }
+
+  /* BRANDS */
+  .brands-label { text-align: center; font-family: var(--font-head); font-weight: 600; color: var(--fg-soft); font-size: var(--step--1); letter-spacing: .04em; margin-bottom: 1.2rem; }
+  .brand-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; }
+  .brand-chip { border: 1px solid var(--border-strong); border-radius: 999px; padding: 0.5rem 1.1rem; font-family: var(--font-head); font-weight: 500; color: var(--fg); font-size: var(--step-0); }
+  .brand-chip:hover { text-decoration: none; border-color: var(--brand); color: var(--brand-strong); background: var(--brand-tint); }
+
+  /* REVIEWS */
+  .reviews { background: var(--surface-2); }
+  .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+  .review-card { display: flex; flex-direction: column; }
+  .review-stars { width: 120px; height: auto; margin-bottom: 0.9rem; }
+  .review-card blockquote { font-size: var(--step-0); color: var(--fg); margin: 0 0 1rem; }
+  .review-card figcaption { font-family: var(--font-head); font-weight: 600; color: var(--ink); margin-top: auto; }
+
+  /* STREETS */
+  .streets { background: var(--surface-2); }
+  .street-list { list-style: none; padding: 0; margin: 0; columns: 4; column-gap: 2rem; }
+  .street-list li { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0; font-size: var(--step--1); color: var(--fg-soft); break-inside: avoid; }
+  .street-list svg { flex: none; color: var(--brand); }
+  @media (max-width: 900px) { .street-list { columns: 3; } }
+  @media (max-width: 640px) { .street-list { columns: 2; } }
+  @media (max-width: 420px) { .street-list { columns: 1; } }
+
+  /* CTA */
+  .cta-band { background: linear-gradient(120deg, var(--brand-strong), var(--brand)); color: #fff; }
+  .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: var(--sp-6); flex-wrap: wrap; }
+  .cta-band h2 { color: #fff; }
+  .cta-band p { color: color-mix(in srgb, #fff 82%, transparent); margin-top: 0.5rem; max-width: 48ch; }
+  .cta-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+  /* RESPONSIVE */
+  @media (max-width: 940px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 2rem; padding-block: var(--sp-7) var(--sp-6); }
+    .hero-card { max-width: 360px; }
+    .services-grid, .reviews-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+  @media (max-width: 620px) {
+    .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+    .services-grid, .reviews-grid { grid-template-columns: 1fr; }
+    .why-list { grid-template-columns: 1fr; }
+    .cta-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>

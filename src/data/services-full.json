@@ -1,0 +1,450 @@
+[
+ {
+  "name": "Computer Repairs",
+  "blurb": "No matter the brand or what's gone wrong, I'll work out the problem and get you running again. I fix desktops, all-in-ones and everything in between, and I'll tell you what it needs before I start. No call-out fee anywhere on Stretton. See computer repair details →",
+  "href": "/desktop-computer-repairs-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Apple Mac Repairs",
+  "blurb": "I love working on Macs, from MacBook Airs to iMacs. Even when Apple turns you away, I can often repair the logic board instead of you buying a new machine. The only things I don't touch are iPhones and iPads. See our Mac repair service →",
+  "href": "/mac-repairs-stretton/",
+  "icon": "apple",
+  "color": "#64748b"
+ },
+ {
+  "name": "Laptop Repairs",
+  "blurb": "Cracked screen, wine in the keyboard, a battery that won't hold charge. I repair laptops of every brand and tell you what's wrong and what it'll cost before I start. Most jobs turn around fast, without the retail markup. See laptop repair details →",
+  "href": "/laptop-repairs-stretton/",
+  "icon": "laptop",
+  "color": "#6366f1"
+ },
+ {
+  "name": "Computer and Network Security",
+  "blurb": "Your bank details, photos and emails are worth protecting from scammers and identity thieves. I'll lock down your computer and home network so your private information stays private. See our security services →",
+  "href": "/computer-network-security-stretton/",
+  "icon": "wifi",
+  "color": "#0d9488"
+ },
+ {
+  "name": "New Computer Setup",
+  "blurb": "Bought a new computer? I'll come to you and set it up on-site, exactly where and how you want it. Your files, email and programs all moved across and ready to use before I leave. See new computer setup →",
+  "href": "/computer-setup-stretton/",
+  "icon": "settings",
+  "color": "#f97316"
+ },
+ {
+  "name": "Computer Tune-up",
+  "blurb": "If your computer has slowed to a crawl, I'll strip out what's dragging it down and get it running like it used to. Usually an hour or two, and no new hardware needed. See computer tune-up details →",
+  "href": "/computer-tune-up-stretton/",
+  "icon": "settings",
+  "color": "#f97316"
+ },
+ {
+  "name": "Data Backup & Transfer",
+  "blurb": "Don't wait for a dead hard drive to start thinking about backups. I'll set up an automatic backup of your important files and photos, so a failure never means losing them. See data backup & transfer →",
+  "href": "/data-backup-transfer-stretton/",
+  "icon": "database",
+  "color": "#06b6d4"
+ },
+ {
+  "name": "Data Recovery",
+  "blurb": "Losing your files is a horrible feeling, and it's often not as final as it looks. Bring me the drive, phone or memory card and I'll do everything I can to get your data back. See data recovery service →",
+  "href": "/data-recovery-stretton/",
+  "icon": "database",
+  "color": "#06b6d4"
+ },
+ {
+  "name": "Email Setup and Problems",
+  "blurb": "Email should just work, and when it doesn't it's maddening. I'll set up your account, get it syncing across your devices, and sort out whatever's stopped it working. See email setup & fixes →",
+  "href": "/email-setup-stretton/",
+  "icon": "mail",
+  "color": "#f59e0b"
+ },
+ {
+  "name": "General Troubleshooting",
+  "blurb": "When something won't behave and you can't work out why, that's my job. A program that won't open, a device that won't sync, a setting nobody can find. Tell me what's happening and I'll fix it. See troubleshooting service →",
+  "href": "/general-troubleshooting-stretton/",
+  "icon": "spark",
+  "color": "#2563eb"
+ },
+ {
+  "name": "New Hardware Installs and Upgrades",
+  "blurb": "A bit more memory or a solid-state drive can make an old PC feel brand new. I'll tell you which upgrade is actually worth the money for your machine, then fit it for you. See hardware upgrade options →",
+  "href": "/hardware-installs-stretton/",
+  "icon": "wrench",
+  "color": "#3b82f6"
+ },
+ {
+  "name": "Hardware Repair & Diagnostics",
+  "blurb": "Fried motherboard, faulty RAM, a fan that sounds like a jet engine. I'll track down what's actually failing and fix it, instead of guessing and swapping out parts you don't need. See hardware repair & diagnostics →",
+  "href": "/hardware-repair-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Insurance Reports",
+  "blurb": "Water or storm damage to your gear? I'll assess it properly and write up a clear report for your insurer, with everything they need to process the claim without the back-and-forth. See insurance report service →",
+  "href": "/insurance-reports-stretton/",
+  "icon": "file",
+  "color": "#14b8a6"
+ },
+ {
+  "name": "Mobile Device Setup",
+  "blurb": "Phones, tablets and watches should talk to each other and to your computer. I'll get them set up and syncing so your photos, contacts and calendar are the same on every device. See mobile device setup →",
+  "href": "/mobile-device-setup-stretton/",
+  "icon": "smartphone",
+  "color": "#ec4899"
+ },
+ {
+  "name": "Operating System Install & Repair",
+  "blurb": "A corrupted Windows or macOS install can make a healthy computer feel broken. I'll repair it where I can, or do a clean reinstall and move your files across so you don't lose anything. See OS install & repair details →",
+  "href": "/operating-system-install-repair-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Wireless Networks and Network Setups",
+  "blurb": "I'll set up a secure wireless network at home so your devices, printers and files all connect properly. Locked down so the neighbours aren't on it, and simple enough that you're not fighting it. See wireless network setup →",
+  "href": "/setup-wireless-home-network-stretton/",
+  "icon": "wifi",
+  "color": "#0d9488"
+ },
+ {
+  "name": "Software Install & Setup",
+  "blurb": "Whatever program you need, I'll install it and set it up properly so it's ready to use. I can also point you to free alternatives that do the same job for nothing. See software install service →",
+  "href": "/software-install-setup-stretton/",
+  "icon": "settings",
+  "color": "#f97316"
+ },
+ {
+  "name": "Computer Training",
+  "blurb": "Want to feel confident with your computer or phone? I'll teach you one-on-one, at your pace, in plain English. We cover whatever you want to learn, from the basics to the things that have been frustrating you. See computer training details →",
+  "href": "/training-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Virus & Spyware Removal",
+  "blurb": "Slow computer, strange pop-ups, or friends getting emails you never sent? That's usually a virus or spyware. I'll clean it out and set things up so it doesn't happen again. See virus removal details →",
+  "href": "/virus-spyware-removal-stretton/",
+  "icon": "shield",
+  "color": "#ef4444"
+ },
+ {
+  "name": "New Computer Build",
+  "blurb": "I'll build you a computer around what you actually do with it, whether that's gaming, work or the household. Better value than the retail shelf, and it boots in seconds. See custom computer builds →",
+  "href": "/new-computer-build-stretton/",
+  "icon": "wrench",
+  "color": "#3b82f6"
+ },
+ {
+  "name": "Search Engine Optimisation (SEO)",
+  "blurb": "If customers can't find you on Google, you're handing them to your competitors. I'll work on your website and listing so you climb the rankings for the searches that actually bring you business. See our SEO services →",
+  "href": "/smart-seo-services-stretton/",
+  "icon": "globe",
+  "color": "#8b5cf6"
+ },
+ {
+  "name": "New Websites",
+  "blurb": "I build clean, fast websites that make small businesses look the part, for a fraction of agency prices. You tell me what you need and I'll handle the rest. See website design service →",
+  "href": "/website-design-stretton/",
+  "icon": "globe",
+  "color": "#8b5cf6"
+ },
+ {
+  "name": "Logos / Pamphlets / Business Card Design",
+  "blurb": "Starting a business and need a logo or business cards? I'll design something that looks professional and is properly yours, ready to print or post online. See logo & design services →",
+  "href": "/logos-business-cards-stretton/",
+  "icon": "globe",
+  "color": "#8b5cf6"
+ },
+ {
+  "name": "Redesigns / Updates to Websites",
+  "blurb": "Already have a website but parts of it bug you? I'll update the content, fix what's dated and tidy up the bits that aren't working, without rebuilding the whole thing. See website redesign service →",
+  "href": "/website-redesigns-updates-stretton/",
+  "icon": "globe",
+  "color": "#8b5cf6"
+ },
+ {
+  "name": "Web Hosting",
+  "blurb": "I host websites here in Australia, not on an overseas server you can never reach. If something goes wrong you talk to a local, and support is there around the clock. See web hosting details →",
+  "href": "/website-hosting-stretton/",
+  "icon": "globe",
+  "color": "#8b5cf6"
+ },
+ {
+  "name": "Domain / Custom Emails",
+  "blurb": "A custom domain and matching email address make your business look far more professional than a free Gmail. I'll register your domain and set up email that fits, working across all your devices. See domain & email services →",
+  "href": "/domain-custom-emails-stretton/",
+  "icon": "mail",
+  "color": "#f59e0b"
+ },
+ {
+  "name": "NBN Setup and Installation",
+  "blurb": "Getting onto the NBN, or moving to a better plan? I'll handle the changeover and set up your modem and Wi-Fi. I'll also give you honest advice on which provider suits you, because the big names aren't always the best pick. See NBN setup details →",
+  "href": "/nbn-setup-installation-stretton/",
+  "icon": "wifi",
+  "color": "#0d9488"
+ },
+ {
+  "name": "Windows De-bloat and Customisation Service",
+  "blurb": "Tired of Windows cluttering your screen with apps and ads you never asked for? I'll strip out the junk, kill as many ads as I can, and set it up the way it should have shipped. I can even bring back the classic start menu. See Windows de-bloat service →",
+  "href": "/windows-debloat-customisation-stretton/",
+  "icon": "settings",
+  "color": "#f97316"
+ },
+ {
+  "name": "Software Sales and Solutions",
+  "blurb": "I can supply the software you need, often cheaper than buying it retail. From Microsoft Office to Windows itself, I'll get you set up with the right version and a proper licence. See software sales & solutions →",
+  "href": "/software-sales-solutions-stretton/",
+  "icon": "settings",
+  "color": "#f97316"
+ },
+ {
+  "name": "Cloud Backup / Storage Solutions",
+  "blurb": "Every hard drive fails eventually, it's only a question of when. I'll set you up with cloud backup that runs quietly in the background, so your documents and photos are safe even when a drive dies. See cloud backup solutions →",
+  "href": "/cloud-backup-storage-stretton/",
+  "icon": "database",
+  "color": "#06b6d4"
+ },
+ {
+  "name": "Google Workspace / Office 365 Business Solutions",
+  "blurb": "Running your business on Google Workspace or Microsoft 365? I'll set up your accounts, email and shared files, and sort the domain settings that usually trip people up. See Workspace & 365 solutions →",
+  "href": "/google-workspace-office-365-stretton/",
+  "icon": "mail",
+  "color": "#f59e0b"
+ },
+ {
+  "name": "Laptop & Computer Buying Service",
+  "blurb": "Not sure which laptop to buy? Tell me your budget and what you'll use it for, and I'll tell you exactly what to get. I can source and set it up for you, or just give you honest advice so you don't overspend. See our buying service →",
+  "href": "/laptop-buying-service-stretton/",
+  "icon": "laptop",
+  "color": "#6366f1"
+ },
+ {
+  "name": "Server Support",
+  "blurb": "When a small business server goes down, work stops. I'll get yours running again quickly, then keep it maintained so slowdowns and failures don't catch you out mid-week. See server support details →",
+  "href": "/server-support-maintenance-stretton/",
+  "icon": "server",
+  "color": "#0891b2"
+ },
+ {
+  "name": "Preventative Maintenance and General Computer Care",
+  "blurb": "Most computer disasters can be headed off with a regular checkup. In about an hour I'll clear out the problems building up in the background and flag anything heading for trouble, before it costs you. See preventative maintenance →",
+  "href": "/preventative-maintenance-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "General Advice for All Your Tech Questions",
+  "blurb": "Not sure which phone, tablet or internet plan to go with? Ask me. I'll give you straight, unbiased advice based on what you need, not on what someone's trying to sell you. See our tech advice service →",
+  "href": "/general-tech-advice-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Help You Get Better Deals on Your ISP",
+  "blurb": "You've got a mate in the industry now. I know what the providers are really charging, and I can often ring yours and negotiate a better price or more data. That can be real money off your bill every month. See ISP deal help details →",
+  "href": "/isp-deals-help-stretton/",
+  "icon": "wifi",
+  "color": "#0d9488"
+ },
+ {
+  "name": "Get Started with Crypto Currency",
+  "blurb": "Curious about Bitcoin, Ethereum and other crypto but not sure where to start? I'm not a financial advisor, but I can walk you through the technical side safely, from setting up a wallet to buying, selling and moving funds to and from an exchange. See crypto starter service →",
+  "href": "/crypto-currency-setup-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Laptop Screen Replacement",
+  "blurb": "The screen is often the first thing to go on a laptop. If yours is cracked, flickering or dull, I'll talk you through the options and fit a replacement so it looks as good as new. See screen replacement details →",
+  "href": "/laptop-screen-replacement-stretton/",
+  "icon": "laptop",
+  "color": "#6366f1"
+ },
+ {
+  "name": "Laptop Battery Replacement",
+  "blurb": "If your laptop only lasts twenty minutes off the charger, the battery is worn out. I can replace it on almost any model, with a genuine or a quality aftermarket option depending on your budget. See battery replacement details →",
+  "href": "/laptop-battery-replacement-stretton/",
+  "icon": "laptop",
+  "color": "#6366f1"
+ },
+ {
+  "name": "Family Safety and Screen Time Solutions",
+  "blurb": "Want to keep the kids away from the wrong parts of the internet and off their screens at dinner? I'll set up parental controls and screen-time limits across their devices, so it's the settings enforcing the rules, not you. See family safety solutions →",
+  "href": "/family-safety-screen-time-stretton/",
+  "icon": "laptop",
+  "color": "#6366f1"
+ },
+ {
+  "name": "Business IT Support and Services",
+  "blurb": "Running a business is hard enough without fighting your own computers. I'll look after the lot, from your network to the day-to-day problems that eat your time, so you can get on with the work that pays. See business IT support →",
+  "href": "/business-it-support-and-services-in-stretton/",
+  "icon": "spark",
+  "color": "#2563eb"
+ },
+ {
+  "name": "Security Camera and Alarm Installation",
+  "blurb": "Cheap wireless cameras run flat or get pinched right when you need them. I install hard-wired CCTV that runs for years with no monthly fees, so your home or business is actually covered. See CCTV packages & pricing →",
+  "href": "/our-services/cctv-service-stretton/",
+  "icon": "camera",
+  "color": "#e11d48"
+ },
+ {
+  "name": "Alarm System Installation",
+  "blurb": "A visible alarm and a loud siren take your place off a burglar's easy-target list. I install app-controlled alarm systems, tie them into your cameras, and set them up with no lock-in monitoring. Licensed security installer. See alarm system installation →",
+  "href": "/alarm-system-installation-stretton/",
+  "icon": "home",
+  "color": "#f43f5e"
+ },
+ {
+  "name": "Smart Home Automation",
+  "blurb": "Lights that come on as you arrive, a door you unlock from your phone, one “goodnight” that locks up and turns everything off. I set up smart home automation and make the pieces actually work together, on a network that keeps them online. See smart home automation →",
+  "href": "/smart-home-automation-stretton/",
+  "icon": "home",
+  "color": "#f43f5e"
+ },
+ {
+  "name": "Windows 11 Upgrade",
+  "blurb": "Told your computer can't run Windows 11 and you need a new one? Often that's not true. If your machine still runs fine, I can get Windows 11 onto it and save you buying a replacement you don't need. See Windows 11 upgrade details →",
+  "href": "/windows-11-upgrade-stretton/",
+  "icon": "wrench",
+  "color": "#3b82f6"
+ },
+ {
+  "name": "Learn About AI",
+  "blurb": "AI is everywhere now, and it's surprisingly useful once someone shows you how. I'll teach you the basics in plain English and help you put it to work, for your business or just your own curiosity. See our AI training sessions →",
+  "href": "/learn-about-ai-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Laptop Screen Hinge Repairs",
+  "blurb": "If your laptop lid has gone stiff, wobbly or is cracking the case near the hinge, get it seen to before it tears the screen cable. I repair hinges on all brands, quickly and for far less than a new laptop. See hinge repair details →",
+  "href": "/laptop-hinge-repairs-stretton/",
+  "icon": "laptop",
+  "color": "#6366f1"
+ },
+ {
+  "name": "AI Receptionist and Answering Services",
+  "blurb": "Most people won't leave a voicemail anymore, they just ring the next business. An AI receptionist answers when you can't, takes the details and books the job, so you stop losing customers to missed calls. See AI receptionist details →",
+  "href": "/ai-receptionist-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Console Repairs",
+  "blurb": "Xbox, PS5 or Switch playing up? I'll get it repaired and back to you with a short turnaround, so nobody's staring at a blank screen for long. See console repair details →",
+  "href": "/console-repairs-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "Robot Vacuum Cleaner Repairs",
+  "blurb": "When the robot vacuum dies, you notice fast. I'll get yours cleaning again, from dead batteries and worn brushes to the sensors and wheels that stop it finding its way around. See robot vacuum repairs →",
+  "href": "/robot-vacuum-repairs-stretton/",
+  "icon": "book",
+  "color": "#22c55e"
+ },
+ {
+  "name": "One Drive Removal",
+  "blurb": "OneDrive installs itself, syncs without asking and quietly moves your files around until nobody knows where anything is. If it's caused you grief, I'll remove it cleanly and set you up with something that stays out of your way. See OneDrive removal service →",
+  "href": "/onedrive-removal-stretton/",
+  "icon": "shield",
+  "color": "#ef4444"
+ },
+ {
+  "name": "Plex / Media Server Setups and Configuration",
+  "blurb": "Turn your movies, shows and photos into your own private Netflix that plays on every TV and phone in the house. I'll set up Plex, organise the library so it looks the part, and make sure it streams without buffering. See Plex & media server setup →",
+  "href": "/plex-media-server-setup-stretton/",
+  "icon": "server",
+  "color": "#0891b2"
+ },
+ {
+  "name": "Password Manager Setup and Training",
+  "blurb": "Sick of forgetting passwords and resetting them every week? I'll set up a proper password manager across your devices, so you remember one password and it handles the rest. I'll add two-factor security to your important accounts while I'm at it. See password manager setup →",
+  "href": "/password-manager-2fa-setup-stretton/",
+  "icon": "shield",
+  "color": "#ef4444"
+ },
+ {
+  "name": "Accessibility & Assistive Tech Setup for Seniors / Low-Vision Users",
+  "blurb": "If reading the screen or hearing alerts has become a struggle, the right settings make a world of difference. I'll tailor your computer, phone and devices with bigger text, voice control or hearing support, then show you how to use it with confidence. See assistive tech setup →",
+  "href": "/assistive-tech-setup-stretton/",
+  "icon": "settings",
+  "color": "#f97316"
+ },
+ {
+  "name": "3D Printer Setup, Calibration",
+  "blurb": "A 3D printer is only as good as its setup. I'll get yours assembled, calibrated and dialled in so you get clean prints instead of a pile of failed jobs, and I can repair one that's stopped behaving. See 3D printer setup details →",
+  "href": "/3d-printer-setup-stretton/",
+  "icon": "wrench",
+  "color": "#3b82f6"
+ },
+ {
+  "name": "Network Optimisation & Wi-Fi Mesh Design",
+  "blurb": "Dead spots where the Wi-Fi drops out? I'll design a mesh network that blankets the whole house or office in strong, steady signal. No more standing in the hallway just to load a page. See mesh WiFi setup details →",
+  "href": "/network-optimisation-mesh-wifi-stretton/",
+  "icon": "wifi",
+  "color": "#0d9488"
+ },
+ {
+  "name": "Network Data Cabling",
+  "blurb": "WiFi drops out and slows down. A cable doesn't. I run neat, licensed Ethernet through homes and businesses, and I can get a solid connection out to the shed, granny flat or pool house too. See data cabling details →",
+  "href": "/data-cabling-stretton/",
+  "icon": "wifi",
+  "color": "#0d9488"
+ },
+ {
+  "name": "Photo Organisation / VHS and Slide Restoration",
+  "blurb": "Thousands of photos scattered across phones, drives and old albums? I'll organise them so you can actually find the ones you want, by date, place or person. I also digitise old VHS tapes and slides before they fade for good. See photo & VHS restoration →",
+  "href": "/photo-document-organisation-stretton/",
+  "icon": "database",
+  "color": "#06b6d4"
+ },
+ {
+  "name": "NAS / Home or Small Office File Server Setup (Synology/QNAP)",
+  "blurb": "A NAS gives you one central place to store and share files across the house or office, without renting cloud space forever. I'll set up a Synology or QNAP for your backups, media and remote access, and lock it down properly. See NAS & file server setup →",
+  "href": "/nas-file-server-setup-stretton/",
+  "icon": "database",
+  "color": "#06b6d4"
+ },
+ {
+  "name": "UPS & Power Protection Installation",
+  "blurb": "One summer storm surge can kill a computer or corrupt what you were working on. I'll fit a UPS that rides out blackouts and soaks up surges, so your gear keeps running and your work stays safe. See UPS & surge protection →",
+  "href": "/ups-surge-protection-stretton/",
+  "icon": "server",
+  "color": "#0891b2"
+ },
+ {
+  "name": "Smart TV and Streaming Services Setups",
+  "blurb": "Netflix, Disney+, Stan and YouTube, all set up and signed in on your TV or media box so movie night just works. No buffering, no juggling remotes, no working out which app is which. See Smart TV & streaming setup →",
+  "href": "/smart-tv-streaming-setup-stretton/",
+  "icon": "tv",
+  "color": "#a855f7"
+ },
+ {
+  "name": "TV Antenna Installation & Aerial Repairs",
+  "blurb": "Pixelating picture or missing channels is almost always the antenna, not the TV. I install, repair and maintain digital aerials so you get Channels 7, 9 and 10 back in clear quality, free-to-air with no subscription. See TV antenna installation →",
+  "href": "/tv-antenna-installation-stretton/",
+  "icon": "tv",
+  "color": "#a855f7"
+ },
+ {
+  "name": "Facebook, Instagram, Google, Microsoft Account Recovery Services",
+  "blurb": "Locked out of your Gmail, Facebook, Instagram or Microsoft account? Act fast. I know the recovery processes and will do everything I can to get you back in, though nobody can promise it. Once you're in, I'll add two-factor security so it doesn't happen again. See account recovery service →",
+  "href": "/account-recovery-services-stretton/",
+  "icon": "shield",
+  "color": "#ef4444"
+ },
+ {
+  "name": "Starlink Installation",
+  "blurb": "I mount the Starlink dish, run the cable neatly, set up the router and get strong Wi-Fi to every room. Ideal for rural and hinterland properties the NBN never reached. See Starlink installation details →",
+  "href": "/starlink-installation-stretton/",
+  "icon": "wifi",
+  "color": "#0d9488"
+ }
+]

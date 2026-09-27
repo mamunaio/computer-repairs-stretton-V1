@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://www.computerrepairsstretton.com.au/sitemap.xml

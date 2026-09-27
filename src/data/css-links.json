@@ -1,0 +1,130 @@
+[
+  {
+    "href": "/assets/wp-includes/css/dist/block-library/style.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/wp-call-button/assets/block/build/index.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/uploads/font-awesome/v6.5.1/css/svg-with-js.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-includes/css/dashicons.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/to-top/public/css/to-top-public.css",
+    "ext": false
+  },
+  {
+    "href": "https://fonts.googleapis.com/css?family=Lato%3Aregular%2Citalic%2C700%2C100%2C100italic%2C300%2C300italic%2C700italic%2C900%2C900italic&ver=1.6.4",
+    "ext": true
+  },
+  {
+    "href": "/assets/wp-content/themes/layerswp/assets/css/framework.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/themes/layerswp/assets/css/components.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/themes/layerswp/assets/css/responsive.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/themes/layerswp/assets/css/layers-icons.css",
+    "ext": false
+  },
+  {
+    "href": "https://use.fontawesome.com/releases/v6.5.1/css/all.css",
+    "ext": true
+  },
+  {
+    "href": "/assets/wp-content/themes/layerswp-child/style.css",
+    "ext": false
+  },
+  {
+    "href": "https://use.fontawesome.com/releases/v6.5.1/css/v4-shims.css",
+    "ext": true
+  },
+  {
+    "href": "/assets/wp-content/themes/layerswp/core/widgets/css/swiper.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/frontend.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/uploads/elementor/css/post-2277.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/widget-heading.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/widget-image.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/widget-spacer.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/widget-accordion.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/uploads/elementor/css/post-2278.css",
+    "ext": false
+  },
+  {
+    "href": "https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap",
+    "ext": true
+  },
+  {
+    "href": "https://fonts.googleapis.com/css?family=Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap",
+    "ext": true
+  },
+  {
+    "href": "https://fonts.googleapis.com/css?family=Patua+One:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap",
+    "ext": true
+  },
+  {
+    "href": "/assets/wp-content/uploads/elementor/css/post-1801.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/plugins/elementor/assets/css/widget-video.min.css",
+    "ext": false
+  },
+  {
+    "href": "/assets/wp-content/uploads/elementor/css/post-2404.css",
+    "ext": false
+  }
+]

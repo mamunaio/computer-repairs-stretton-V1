@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
 
+// Faithful clone of computerrepairsstretton.com.au.
+// Static output — deploys directly to Cloudflare Pages (no adapter needed).
 export default defineConfig({
-  site: 'https://cctvstretton.com.au',
-  trailingSlash: 'never',
-  integrations: [sitemap()],
+  site: 'https://www.computerrepairsstretton.com.au',
+  trailingSlash: 'always',
+  build: { format: 'directory' },
 });

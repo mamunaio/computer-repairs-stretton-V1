@@ -1,0 +1,29 @@
+---
+import Site from '../layouts/Site.astro';
+import { business } from '../config/business.ts';
+---
+<Site
+  title="Page Not Found, Computer Repairs Stretton"
+  description="That page has moved or no longer exists. Head to the homepage or our services, or call Computer Repairs Stretton on 0477 319 160."
+  canonical={`${business.domain}/404/`}
+>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <span>Page Not Found</span>
+      </nav>
+      <h1>That Page Has Moved Or No Longer Exists</h1>
+    </div>
+  </section>
+  <div class="container section">
+    <article class="prose">
+      <p>We tidied up the site, so a few old links have changed. Let's get you where you need to go.</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="/">Go to the homepage</a>
+        <a class="btn btn-outline btn-lg" href="/our-services/">See all services</a>
+        <a class="btn btn-outline btn-lg" href="/contact-us/">Contact us</a>
+      </p>
+      <p>Or call us any day, 7am to 10pm, on <a href={`tel:${business.phoneTel}`}>{business.phoneDisplay}</a>.</p>
+    </article>
+  </div>
+</Site>

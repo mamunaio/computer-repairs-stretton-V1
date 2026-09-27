@@ -1,0 +1,40 @@
+---
+import { business } from '../../config/business.ts';
+import { home } from '../../data/home.ts';
+const review = home.reviews[0];
+---
+<div class="side">
+  <div class="side-card call">
+    <p class="side-title">Call us</p>
+    <a class="call-number" href={`tel:${business.phoneTel}`}>{business.phoneDisplay}</a>
+    <p class="call-hours">Open 7 days · {business.openingHours}</p>
+    <a class="btn btn-primary" href={business.quoteUrl}>Get a free quote</a>
+  </div>
+
+  <div class="side-card">
+    <p class="side-title">Our services</p>
+    <ul class="side-list">
+      {home.services.map((s) => <li><a href={s.href}>{s.label}</a></li>)}
+      <li><a href="/our-services/"><strong>All services →</strong></a></li>
+    </ul>
+  </div>
+
+  <div class="side-card">
+    <p class="side-title">Why choose us</p>
+    <ul class="why-mini">
+      {home.why.map((w) => (
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>{w}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="side-card side-review">
+    <p class="side-title">What customers say</p>
+    <img src="/assets/wp-content/uploads/2023/11/5tars.png" alt="5 stars" width="120" height="22" style="margin-bottom:.6rem" />
+    <blockquote>{review.text}</blockquote>
+    <figcaption>, {review.name}</figcaption>
+  </div>
+</div>

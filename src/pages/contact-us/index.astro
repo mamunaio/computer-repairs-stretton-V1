@@ -1,0 +1,144 @@
+---
+import Site from '../../layouts/Site.astro';
+import { business } from '../../config/business.ts';
+import pageData from '../../data/pages/contact-us.json';
+
+const head = pageData.head;
+const a = business.address;
+
+// Cloned from Acacia Ridge Contact, localised to Stretton, Zoo refs removed.
+const intro = "Need tech help? We can be reached by mobile or text on the number below. If you need a laptop or Mac repaired and you know what's wrong with it, a broken hinge, a cracked screen, a keyboard not working, use the quote button. If you're unsure what's wrong, or would rather talk to someone, don't hesitate to call.";
+const laptopNote = "Laptop and Mac repairs are getting harder to do, and a lot of repair companies outsource the work to someone else. We process around 40 laptop repair jobs a week, and we even white-label our services to other computer repair companies who then mark up the cost. If you can wait for our quote, delivered the same business day, you can be sure it comes from the company actually doing the repair, not a middleman.";
+const contactMethods = [
+  { icon: 'phone', title: 'Call or text', value: business.phoneDisplay, href: `tel:${business.phoneTel}`, note: 'Fastest way to reach us' },
+  { icon: 'quote', title: 'Laptop / Mac quote', value: 'Get a same-day quote', href: business.quoteUrl, note: 'Know what’s wrong? Send the details' },
+  { icon: 'mail', title: 'Email', value: business.email, href: `mailto:${business.email}`, note: 'For general enquiries' },
+];
+const icons: Record<string, string> = {
+  phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  quote: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+};
+const Icon = (n: string) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${icons[n]}</svg>`;
+---
+<Site
+  title={head.title}
+  description={head.metaDescription}
+  canonical={head.canonical}
+  ogImage="/assets/wp-content/uploads/2021/12/logo-h-color-stretton.png"
+>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <span>Contact Us</span></nav>
+      <h1>Contact Us</h1>
+      <p class="page-sub">{intro}</p>
+    </div>
+  </section>
+
+  <div class="container section contact-grid">
+    <div class="contact-main">
+      <div class="method-cards">
+        {contactMethods.map((m) => (
+          <a class="method-card" href={m.href}>
+            <span class="method-ic" set:html={Icon(m.icon)}></span>
+            <div>
+              <span class="method-title">{m.title}</span>
+              <strong>{m.value}</strong>
+              <span class="method-note">{m.note}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="prose laptop-note">
+        <p>{laptopNote}</p>
+      </div>
+    </div>
+
+    <aside class="contact-side">
+      <div class="side-card call">
+        <p class="side-title">Opening hours</p>
+        <p class="hours-big">7am, 10pm</p>
+        <p class="call-hours">7 days a week, including public holidays. We sometimes have limited staff outside business hours and may book out earlier than usual.</p>
+        <a class="btn btn-primary" href={business.quoteUrl}>Get a free quote</a>
+      </div>
+      <div class="side-card address-card">
+        <p class="side-title">Find us</p>
+        <p class="addr">{a.street}<br />{a.locality} {a.region} {a.postalCode}</p>
+      </div>
+    </aside>
+  </div>
+
+  
+  <section class="map-wrap">
+    <iframe
+      title="Computer Repairs Stretton service area"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=153.010%2C-27.665%2C153.085%2C-27.605&layer=mapnik&marker=-27.635%2C153.048"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  
+  <section class="section band-tint">
+    <div class="container">
+      <div class="section-head mx-auto text-center">
+        <span class="eyebrow">Free tool</span>
+        <h2>Slow computer or slow internet? Test your speed</h2>
+        <p>This shows how fast your internet is in Mbps, it should be close to the speed you pay for each month. If it isn't, that's something we can help with.</p>
+      </div>
+      <div class="speedtest"><iframe title="Internet speed test" src="https://openspeedtest.com/speedtest" loading="lazy"></iframe></div>
+    </div>
+  </section>
+
+  
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <h2>We do more than computer repairs</h2>
+        <p>Own a business in Stretton? Ask us about affordable websites, local SEO and a free backlink to support other small local businesses.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary btn-lg" href={business.quoteUrl}>Get a free quote</a>
+        <a class="btn btn-ghost btn-lg" href={`tel:${business.phoneTel}`}>Call {business.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Site>
+
+<style>
+  .band-tint { background: var(--surface-2); }
+  .contact-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: start; }
+  .method-cards { display: grid; gap: 1rem; }
+  .method-card { display: flex; gap: 1rem; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.4rem; color: inherit; transition: transform .16s ease, box-shadow .2s ease, border-color .2s ease; }
+  .method-card:hover { text-decoration: none; transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--brand) 40%, var(--border)); }
+  .method-ic { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--brand-tint); color: var(--brand-strong); }
+  .method-ic svg { width: 24px; height: 24px; }
+  .method-card > div { display: flex; flex-direction: column; }
+  .method-title { font-size: var(--step--1); color: var(--fg-soft); }
+  .method-card strong { font-family: var(--font-head); font-size: var(--step-1); color: var(--ink); }
+  .method-note { font-size: var(--step--1); color: var(--fg-faint); }
+  .laptop-note { margin-top: 1.5rem; color: var(--fg-soft); }
+
+  .contact-side { display: grid; gap: 1.25rem; position: sticky; top: 96px; }
+  .side-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+  .side-card.call { background: linear-gradient(155deg, var(--hero-from), var(--hero-to)); color: #fff; border: 0; }
+  .side-card.call .side-title { color: #b9c6e6; }
+  .side-title { font-family: var(--font-head); font-weight: 600; font-size: var(--step--1); letter-spacing: .06em; text-transform: uppercase; color: var(--fg-soft); margin-bottom: .7rem; }
+  .hours-big { font-family: var(--font-head); font-weight: 700; font-size: var(--step-2); color: #fff; }
+  .call-hours { color: #c3cde6; font-size: var(--step--1); margin: .4rem 0 1.1rem; }
+  .side-card.call .btn { width: 100%; justify-content: center; }
+  .addr { color: var(--fg); font-size: var(--step-0); line-height: 1.6; }
+
+  .map-wrap iframe { width: 100%; height: 420px; border: 0; display: block; }
+  .speedtest { max-width: 900px; margin: 0 auto; }
+  .speedtest iframe { width: 100%; height: 560px; border: 0; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); background: #fff; }
+
+  .cta-band { background: linear-gradient(120deg, var(--brand-strong), var(--brand)); color: #fff; }
+  .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: var(--sp-6); flex-wrap: wrap; }
+  .cta-band h2 { color: #fff; }
+  .cta-band p { color: color-mix(in srgb, #fff 82%, transparent); margin-top: .5rem; max-width: 48ch; }
+  .cta-actions { display: flex; gap: .9rem; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .contact-side { position: static; }
+  }
+</style>

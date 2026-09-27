@@ -1,0 +1,75 @@
+---
+import { business } from '../../config/business.ts';
+import { home } from '../../data/home.ts';
+
+const year = new Date().getFullYear();
+const footerServices = home.services.slice(0, 6);
+const a = business.address;
+---
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <img src="/assets/wp-content/uploads/2021/12/logo-h-color-stretton.png" alt={business.name} class="foot-logo" />
+      <p>{business.tagline}. Family-owned and servicing the Greater Brisbane area, Brisbane, Logan, Ipswich, Moreton and Redland Bay.</p>
+      <a class="btn btn-primary" href={business.quoteUrl}>Get a quote</a>
+    </div>
+
+    <div class="foot-col">
+      <h4>Services</h4>
+      <ul>
+        {footerServices.map((s) => <li><a href={s.href}>{s.label}</a></li>)}
+        <li><a href="/our-services/">All services →</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h4>Brands we repair</h4>
+      <ul class="brand-list">
+        {home.brands.map((b) => <li><a href={b.href}>{b.label}</a></li>)}
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h4>Get in touch</h4>
+      <ul class="contact-list">
+        <li><a href={`tel:${business.phoneTel}`}>{business.phoneDisplay}</a></li>
+        <li><a href={`mailto:${business.email}`}>{business.email}</a></li>
+        <li>{a.street}, {a.locality} {a.region} {a.postalCode}</li>
+        <li class="hours">Open 7 days · {business.openingHours}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot-bar">
+    <div class="container foot-bar-inner">
+      <span>© {year} {business.legalName}. All rights reserved.</span>
+      <span class="foot-links"><a href="/sitemap.xml">Sitemap</a> · <a href="/contact-us/">Contact</a></span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: var(--ink); color: #c7cfe0; margin-top: var(--sp-7); }
+  .foot-grid {
+    display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 2.5rem;
+    padding-block: var(--sp-7) var(--sp-5);
+  }
+  .foot-brand p { color: #9aa4bd; margin: 1rem 0 1.25rem; font-size: var(--step--1); max-width: 34ch; }
+  .foot-logo { height: 42px; width: auto; background: #fff; padding: 8px 12px; border-radius: 10px; }
+  .site-footer h4 { color: #fff; font-size: var(--step-0); margin-bottom: 1rem; }
+  .foot-col ul { list-style: none; padding: 0; display: grid; gap: 0.55rem; }
+  .foot-col a { color: #c7cfe0; font-size: var(--step--1); }
+  .foot-col a:hover { color: #fff; text-decoration: none; }
+  .brand-list { grid-template-columns: 1fr 1fr; }
+  .contact-list li { font-size: var(--step--1); color: #9aa4bd; }
+  .hours { color: var(--accent) !important; font-weight: 600; }
+  .foot-bar { border-top: 1px solid rgba(255,255,255,0.08); }
+  .foot-bar-inner { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; font-size: var(--step--1); color: #8892a8; flex-wrap: wrap; }
+  .foot-links a { color: #8892a8; }
+  @media (max-width: 860px) {
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  }
+  @media (max-width: 520px) {
+    .foot-grid { grid-template-columns: 1fr; }
+  }
+</style>

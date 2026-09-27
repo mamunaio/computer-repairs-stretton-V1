@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import Site from '../layouts/Site.astro';
+import ServiceSidebar from '../components/site/ServiceSidebar.astro';
+import { business } from '../config/business.ts';
+
+export async function getStaticPaths() {
+  const mods = import.meta.glob('../data/pages/*.json', { eager: true });
+  return Object.values(mods)
+    .map((m: any) => m.default ?? m)
+    // These paths are served by bespoke redesigned pages.
+    .filter((page: any) => !['/', '/our-services/', '/about-us/', '/contact-us/', '/cctv-security-camera-stretton/'].includes(page.path))
+    .map((page: any) => {
+      const slug = page.path.replace(/^\/+|\/+$/g, '');
+      return { params: { slug: slug || undefined }, props: { page } };
+    });
+}
+
+const { page } = Astro.props;
+const isService = page.template === 'service';
+// Page title without the trailing " - Computer Repairs Stretton" for the H1
+const h1 = (page.head.title || '').replace(/\s*[-, |]\s*Computer Repairs.*$/i, '').trim() || page.head.title;
+---
+{isService ? (
+  <Site
+    title={page.head.title}
+    description={page.head.metaDescription}
+    canonical={page.head.canonical}
+    ogImage={page.head.og?.['og:image']}
+  >
+    {page.head.jsonld?.map((block: string) => (
+      <Fragment set:html={`<script type="application/ld+json">${block}</script>`} />
+    ))}
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a> / <a href="/our-services/">Services</a> / <span>{h1}</span>
+        </nav>
+        <h1>{h1}</h1>
+      </div>
+    </section>
+    <div class="container page-layout">
+      <article class="prose" set:html={page.mainHtml}></article>
+      <aside><ServiceSidebar /></aside>
+    </div>
+  </Site>
+) : (
+  <Base page={page} />
+)}

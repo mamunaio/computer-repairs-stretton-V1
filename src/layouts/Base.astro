@@ -1,0 +1,69 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import chrome from '../data/chrome.json';
+import cssLinks from '../data/css-links.json';
+import globalInline from '../styles/global-inline.css?raw';
+
+interface PageData {
+  path: string;
+  head: {
+    title: string;
+    metaDescription: string;
+    canonical: string;
+    robots: string;
+    og: Record<string, string>;
+    twitter: Record<string, string>;
+    jsonld: string[];
+  };
+  contentHtml: string;
+  extraCss?: string;
+  sliderInit?: string;
+}
+
+const { page } = Astro.props as { page: PageData };
+const h = page.head;
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title set:html={h.title}></title>
+    {h.metaDescription && <meta name="description" content={h.metaDescription} />}
+    {h.robots && <meta name="robots" content={h.robots} />}
+    {h.canonical && <link rel="canonical" href={h.canonical} />}
+
+    {Object.entries(h.og).map(([k, v]) => <meta property={k} content={v} />)}
+    {Object.entries(h.twitter).map(([k, v]) => <meta name={k} content={v} />)}
+
+    <link rel="icon" href="/assets/wp-content/uploads/2021/12/logo-h-color-stretton.png" />
+
+    {cssLinks.map((l: { href: string }) => <link rel="stylesheet" href={l.href} />)}
+
+    <style is:inline set:html={globalInline}></style>
+    {page.extraCss && <style is:inline set:html={page.extraCss}></style>}
+
+    {h.jsonld.map((block) => <script type="application/ld+json" is:inline set:html={block}></script>)}
+  </head>
+  <body>
+    <div id="off-canvas-right" class="wrapper invert off-canvas-right" set:html={chrome.offcanvas}></div>
+    <div class="wrapper-site">
+      <Header />
+      <section id="wrapper-content" class="wrapper-content" set:html={page.contentHtml}></section>
+      <Footer />
+    </div>
+    <Fragment set:html={chrome.callBtn} />
+    <span id="to_top_scrollup" class="dashicons dashicons-arrow-up-alt2" style="display:none;"></span>
+
+    <script is:inline>var layers_script_settings = {"header_sticky_breakpoint":"270"};</script>
+    <script is:inline src="/assets/wp-includes/js/jquery/jquery.min.js"></script>
+    <script is:inline src="/assets/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+    <script is:inline src="/assets/wp-content/themes/layerswp/assets/js/plugins.js"></script>
+    <script is:inline src="/assets/wp-content/themes/layerswp/assets/js/layers.framework.js"></script>
+    <script is:inline src="/assets/wp-content/themes/layerswp/core/widgets/js/swiper.js"></script>
+    {page.sliderInit && <script is:inline set:html={page.sliderInit}></script>}
+    <script is:inline>var to_top_options = {"scroll_offset":"100","icon_opacity":"50","style":"icon","icon_type":"dashicons-arrow-up-alt2","icon_color":"#ffffff","icon_bg_color":"#000000","icon_size":"32","border_radius":"5","image":"/assets/wp-content/plugins/to-top/admin/images/default.png","image_width":"65","image_alt":"","location":"bottom-right","margin_x":"20","margin_y":"20","show_on_admin":"0","enable_autohide":"0","autohide_time":"2","enable_hide_small_device":"0","small_device_max_width":"640","reset":"0"};</script>
+    <script is:inline src="/assets/wp-content/plugins/to-top/public/js/to-top-public.js"></script>
+  </body>
+</html>
