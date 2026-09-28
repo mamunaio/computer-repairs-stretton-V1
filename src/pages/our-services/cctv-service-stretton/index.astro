@@ -21,11 +21,17 @@ import SystemComparison from '../../../components/cctv-service-stretton/SystemCo
 import TrustBadges from '../../../components/cctv-service-stretton/TrustBadges.astro';
 import WomBadges from '../../../components/cctv-service-stretton/WomBadges.astro';
 import CctvLayout from '../../../layouts/CctvLayout.astro';
+import { fetchContent } from '../../../lib/content-client';
+
+const content = await fetchContent('stretton');
 ---
 
-<CctvLayout title="CCTV & Security Camera Installation in Stretton | CCTV Stretton" description="Professionally installed CCTV & security camera systems for local homes and businesses in Stretton and surrounding Brisbane South suburbs. Licensed QLD installers, tidy cabling, clear night vision, mobile viewing.">
+<CctvLayout title={content.seo.title} description={content.seo.description}>
   <Header />
-  <Hero />
+  <Hero 
+    heading={content.hero.heading}
+    description={content.hero.description}
+  />
   <TrustBadges />
   <MasterCablerSection />
   <FeaturedAwards />

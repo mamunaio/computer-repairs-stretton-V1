@@ -10,3 +10,4 @@ computer-repairs-stretton-main/
 .playwright-mcp/
 validate.mjs
 checkshort.mjs
+.env

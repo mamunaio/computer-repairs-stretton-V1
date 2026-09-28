@@ -1,5 +1,14 @@
 ---
 // Component: Hero.astro (Single Static Hero Section - 100% Approved Design)
+interface Props {
+  heading: string;
+  description: string;
+}
+
+const { heading, description } = Astro.props;
+
+// Preserve gradient styling on location name
+const headingParts = heading ? heading.split(/ in /i) : [];
 ---
 <!-- 2. ABOVE THE FOLD / HERO SECTION (WIREFRAME BLOCK 2) -->
 <section class="relative pt-10 pb-20 lg:pt-14 lg:pb-24 overflow-hidden" id="hero-section">
@@ -21,12 +30,18 @@
 
         <!-- Strict Wireframe H1 -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.08]">
-          CCTV &amp; Security Camera Installation in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">Stretton</span>
+          {headingParts.length > 1 ? (
+            <>
+              {headingParts[0]} in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">{headingParts.slice(1).join(' in ')}</span>
+            </>
+          ) : (
+            <span>{heading}</span>
+          )}
         </h1>
 
         <!-- Strict Wireframe Lead Paragraph -->
         <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-          Professionally installed camera systems for local homes and businesses, with tidy cabling, clear night footage, mobile viewing and practical after-installation support.
+          {description}
         </p>
 
         <!-- Button Row -->
