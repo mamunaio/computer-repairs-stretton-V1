@@ -1,4 +1,5 @@
 ---
+import { getStrettonContent } from '../../../lib/content-client';
 import ActiveDeterrenceShowcase from '../../../components/cctv-service-stretton/ActiveDeterrenceShowcase.astro';
 import Faq from '../../../components/cctv-service-stretton/Faq.astro';
 import FeaturedAwards from '../../../components/cctv-service-stretton/FeaturedAwards.astro';
@@ -21,17 +22,13 @@ import SystemComparison from '../../../components/cctv-service-stretton/SystemCo
 import TrustBadges from '../../../components/cctv-service-stretton/TrustBadges.astro';
 import WomBadges from '../../../components/cctv-service-stretton/WomBadges.astro';
 import CctvLayout from '../../../layouts/CctvLayout.astro';
-import { fetchContent } from '../../../lib/content-client';
 
-const content = await fetchContent('stretton');
+const content = await getStrettonContent('stretton');
 ---
 
 <CctvLayout title={content.seo.title} description={content.seo.description}>
   <Header />
-  <Hero 
-    heading={content.hero.heading}
-    description={content.hero.description}
-  />
+  <Hero heading={content.hero.heading} description={content.hero.description} suburb={content.site.suburb} />
   <TrustBadges />
   <MasterCablerSection />
   <FeaturedAwards />
